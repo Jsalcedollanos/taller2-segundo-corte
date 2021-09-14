@@ -182,8 +182,129 @@ print("Serie de numeros: ")
 print(numeros)
 print("El numero menor de la serie de numeros es: ",menor)
 
-    
-    
+# =============================================================================
+# Cinco miembros de un club contra la obesidad desean saber cuanto han
+# bajado o subido de peso desde la última vez que se reunieron. Para esto se
+# debe realizar un ritual de pesaje en donde cada uno se pesa en diez
+# básculas distintas para así tener el pormedio mas exacto de su peso. 
+# Si existe diferencia positiva entre este promedio de peso y el peso de la última
+# vez que se reunieron, significa que subieron de peso. Pero si la diferencia
+# es negativa, significa que bajaron. Lo que el problema requere es que por
+# cada persona se imprima un letrero que diga: “SUBIÓ” o “BAJÓ” y la
+# cantidad de kilos que subió o bajó de peso    
+# =============================================================================
+pesos1 = []
+pesos2 = []
+pesos3 = []
+pesos4 = []
+pesos5 = []
+acu1 = 0
+acu2 = 0
+acu3 = 0
+acu4 = 0
+acu5 = 0
 
+persona1Nombre = input('Ingrese su Nombre: ')
+promedioAnterior1 = float(input('Ingrese Promedio anterior: ')) 
+for i in range(10):
+    peso1 = float(input(f'{persona1Nombre} Ingrese su peso para la báscula N°{i + 1}: '))
+    pesos1.append(peso1)
+    
+for i in range(10):
+    acu1 = acu1 + pesos1[i]
+
+promedio1 = acu1 / 10
+
+# =============================================================================
+# 
+# =============================================================================
+
+persona2Nombre = input('Ingrese su Nombre: ')
+promedioAnterior2 = float(input('Ingrese Promedio anterior: ')) 
+for i in range(10):
+    peso2 = float(input(f'{persona2Nombre} Ingrese su peso para la báscula N°{i + 1}: '))
+    pesos2.append(peso2)
+    
+for i in range(10):
+    acu2 = acu2 + pesos2[i]
+
+promedio2 = acu2 / 10
+
+# =============================================================================
+# 
+# =============================================================================
+
+persona3Nombre = input('Ingrese su Nombre: ')
+promedioAnterior3 = float(input('Ingrese Promedio anterior: ')) 
+for i in range(10):
+    peso3 = float(input(f'{persona2Nombre} Ingrese su peso para la báscula N°{i + 1}: '))
+    pesos3.append(peso3)
+    
+for i in range(10):
+    acu3 = acu3 + pesos3[i]
+
+promedio3 = acu3 / 10
+
+# =============================================================================
+# 
+# =============================================================================
+
+persona4Nombre = input('Ingrese su Nombre: ')
+promedioAnterior4 = float(input('Ingrese Promedio anterior: ')) 
+for i in range(10):
+    peso4 = float(input(f'{persona4Nombre} Ingrese su peso para la báscula N°{i + 1}: '))
+    pesos4.append(peso4)
+    
+for i in range(10):
+    acu4 = acu4 + pesos4[i]
+
+promedio4 = acu4 / 10
+
+# =============================================================================
+# 
+# =============================================================================
+
+persona5Nombre = input('Ingrese su Nombre: ')
+promedioAnterior5 = float(input('Ingrese Promedio anterior: ')) 
+for i in range(10):
+    peso5 = float(input(f'{persona5Nombre} Ingrese su peso para la báscula N°{i + 1}: '))
+    pesos5.append(peso5)
+    
+for i in range(10):
+    acu5 = acu5 + pesos5[i]
+
+promedio5 = acu5 / 10
+
+
+
+     
+print(f'Promedio de peso de {persona1Nombre} es: ',promedio1)
+print(f'Promedio de peso de {persona2Nombre} es: ',promedio2)
+print(f'Promedio de peso de {persona3Nombre} es: ',promedio3)
+print(f'Promedio de peso de {persona4Nombre} es: ',promedio4)
+print(f'Promedio de peso de {persona5Nombre} es: ',promedio5)
         
-        
+if promedio1 > promedioAnterior1:
+    print(f'{persona1Nombre} SUBIO')
+else:
+     print(f'{persona1Nombre} SUBIO')
+     
+if promedio2 > promedioAnterior2:
+    print(f'{persona2Nombre} SUBIO')
+else:
+     print(f'{persona2Nombre} SUBIO')
+     
+if promedio3 > promedioAnterior3:
+    print(f'{persona3Nombre} SUBIO')
+else:
+     print(f'{persona3Nombre} SUBIO') 
+
+if promedio4 > promedioAnterior4:
+    print(f'{persona4Nombre} SUBIO')
+else:
+     print(f'{persona4Nombre} SUBIO')
+     
+if promedio5 > promedioAnterior5:
+    print(f'{persona5Nombre} SUBIO')
+else:
+     print(f'{persona5Nombre} SUBIO')        
