@@ -128,6 +128,43 @@ for x in range(cantidad):
         salarioTotal = int(salario1 + salario2)
         print(f'El salario del obrero {x + 1} es: ',salarioTotal)
         
+# =============================================================================
+# 4. Calcular el promedio de edades de hombres, mujeres y de todo un grupo
+# de alumnos.
+# =============================================================================
+
+acuHombre = 0
+acuMujer = 0
+acuAlumno = 0
+
+cantHombres = int(input('Cantidad de hombres: '))      
+cantMujeres = int(input('Cantidad de mujeres: '))
+cantAlumnos = int(input('Cantidad de alumnos: '))
+
+contHombres = 0
+contMujeres = 0
+contAlumnos = 0
+
+for i in range(cantHombres):
+    edad =   int(input(f'Genero(Hombre){i + 1} Ingrese edad: '))
+    acuHombre = acuHombre + edad
+    promeHombres = acuHombre / cantHombres
+    
+for i in range(cantMujeres):
+    edad =   int(input(f'Genero(Mujer){i + 1} Ingrese edad: '))
+    acuMujer = acuMujer + edad
+    promeMujeres = acuMujer / cantMujeres
+    
+for i in range(cantAlumnos):
+    edad =   int(input(f'Alumno {i + 1} Ingrese edad: '))
+    acuAlumno = acuAlumno + edad
+    promeAlumnos = acuAlumno / cantAlumnos
+    
+print('Promedio de edades de hombres es: ',promeHombres)
+print('Promedio de edades de Mujeres es: ',promeMujeres)
+print('Promedio de edades de alumnos es: ',promeAlumnos)
+    
+    
 
 
         
