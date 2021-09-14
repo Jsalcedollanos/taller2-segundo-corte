@@ -48,3 +48,61 @@ print('cantidad de sticker rosa es: ',rosa)
 print('cantidad de sticker roja es: ',roja)
 print('cantidad de sticker verde es: ',verde)
 print('cantidad de sticker azul es: ',azul)
+
+# =============================================================================
+# 2. Un Zoólogo pretende determinar el porcentaje de animales que hay en las
+# siguiente categorias de edades: 0 a 1 año, de mas de 1 año y menos de 3 y
+# de 3 o mas años. El zoológico todavía no está seguro del animal que va
+# estudiar. Si se decide por elefantes solo tomará una muestra de 20 de ellos;
+# si se decide por jirafas, tomara 15 de muestras y si son chompancés tomará
+# 40.
+# =============================================================================
+animales = []
+cantidad = int(input('Ingrese la cantidad de animales: '))
+elefantes = 0
+jirafa = 0
+chimpances = 0
+categoria1 = 0
+categoria2 = 0
+categoria3 = 0
+porcentaje1 = 0
+porcentaje2 = 0
+porcentaje3 = 0
+for x in range(cantidad):
+    edad = int(input('Ingrese la edad del animal: '))
+    animales.append(edad)
+    
+    
+for x in range(cantidad):
+    if animales[x] >= 0 and animales[x] <= 1:
+        categoria1 = categoria1 + 1
+        porcentaje1 = int(categoria1 * cantidad) 
+        
+    if animales[x] > 1 and animales[x] < 3:
+        categoria2 = categoria2 + 1
+        porcentaje2 = int(categoria2 * cantidad)
+        
+    if animales[x] >= 3:
+        categoria3 = categoria3 + 1
+        porcentaje3 = int(categoria3 * cantidad)
+        
+p = int(input('Que animal desea seleccionar? (1)Elefante (2)Jirafa (3)Chimpanses : '))
+
+if (p > 3):
+    print('Oohh espera... la especimen que intentas escoger no se encuentra registrada! Atento a tu seleccion...')
+        
+if p == 1:
+    print(f'Se escogera {cantidad} Elefantes aleatoriamente')
+if p == 2:
+    print(f'Se escogera {cantidad} Jirafas aleatoriamente')
+if p == 3:
+    print(f'Se escogera {cantidad} Chimpanses aleatoriamente')
+    
+
+        
+print(f'Cantidad de animales en la categoria 1 de (0 a 1 años es): {porcentaje1}%')
+print(f'Cantidad de animales en la categoria 2 de (Mas de 1 años y menor de 3 años): {porcentaje2}%')
+print(f'Cantidad de animales en la categoria 3 de (Mas de 3 años es): {porcentaje3}%')
+
+
+          
