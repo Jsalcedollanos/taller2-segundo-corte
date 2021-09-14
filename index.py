@@ -164,8 +164,26 @@ print('Promedio de edades de hombres es: ',promeHombres)
 print('Promedio de edades de Mujeres es: ',promeMujeres)
 print('Promedio de edades de alumnos es: ',promeAlumnos)
     
-    
+# =============================================================================
+# 5. Encontrar el menor valor de un conjunto de n números dados   
+# =============================================================================
+numeros=[]
+cant = int(input('Ingrese la cantidad de numeros que desea calcular: '))
+for x in range(cant):
+    valor=int(input("Ingrese el numero:"))
+    numeros.append(valor)
 
+menor=numeros[0]
+for x in range(1,cant):
+    if numeros[x]<menor:
+        menor=numeros[x]
+
+print("Serie de numeros: ")
+print(numeros)
+print("El numero menor de la serie de numeros es: ",menor)
+
+    
+    
 
         
         
