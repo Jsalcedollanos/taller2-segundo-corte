@@ -308,3 +308,27 @@ if promedio5 > promedioAnterior5:
     print(f'{persona5Nombre} SUBIO')
 else:
      print(f'{persona5Nombre} SUBIO')        
+     
+# =============================================================================
+# 7. En un supermercado una ama de casa pone en su carrito los artículos que
+# va tomando de los estantes. La señora quiere asegurarse de que el cajero
+# le cobre bien lo que ella ha comprado, por lo que cada vez que toma un
+# artóculo anota su precio junto con la cantidad de artículos iguales que ha
+# tomado y determina cuanto dinero gastará en ese artículo; a esto le suma lo
+# que irá gastando en los demás artículos, hasta que decide que ya tomó
+# todo lo que necesitaba. Ayúdele a esta señora a obtener el total de su
+# compra.
+# =============================================================================
+
+acu = 0
+i = 1
+while i == 1:
+    articulo = input('Ingrese nombre del articulo: ')
+    valor = int(input('Ingrese el valor del producto: '))
+    cantidad = int(input(f'Cantidad de {articulo}: '))
+    valorT = valor * cantidad
+    acu = acu + valorT
+    i = int(input('¿Desea ingresar otro producto? 1.(si) 2.(no): '))
+    
+
+print('Valor total es: ',acu)
