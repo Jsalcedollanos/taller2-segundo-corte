@@ -104,5 +104,31 @@ print(f'Cantidad de animales en la categoria 1 de (0 a 1 años es): {porcentaje1
 print(f'Cantidad de animales en la categoria 2 de (Mas de 1 años y menor de 3 años): {porcentaje2}%')
 print(f'Cantidad de animales en la categoria 3 de (Mas de 3 años es): {porcentaje3}%')
 
+# =============================================================================
+# 3. Una empresa se requiere calcular el salario semanal de cada uno de los n
+# obreros que laboran en ella. El salario se obtiene de la siguiente forma:
+# a. Si el obrero trabaja 40 horas o menos se le paga $20 por hora
+# b. Si trabaja mas de 40 horas se le paga $20 por cada una de
+# lasprimeras 40 horas y $25 por cada hora extra.
+# =============================================================================
+obreros = []
+cantidad = int(input('Ingrese cantidad de trabajadores de su compañia: '))
+for x in range(cantidad):
+        horas = int(input('Ingrese cantidad de horas: '))
+        obreros.append(horas)
+        
+for x in range(cantidad):
+    if obreros[x] <= 40:
+        salario = int(obreros[x] * 20)
+        print(f'El salario del obrero {x + 1} es: ',salario)
+    if obreros[x] > 40:
+        he = obreros[x] - 40
+        salario1 = (obreros[x] - he) * 40
+        salario2 = he * 25
+        salarioTotal = int(salario1 + salario2)
+        print(f'El salario del obrero {x + 1} es: ',salarioTotal)
+        
 
-          
+
+        
+        
