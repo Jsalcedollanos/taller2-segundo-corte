@@ -332,3 +332,66 @@ while i == 1:
     
 
 print('Valor total es: ',acu)
+
+# =============================================================================
+#8. Un teatro otorga descuentos según la edad del cliente, determinar la
+# cantidad del dinero que el teatro deja de percibir por cada ua de las
+# categorias. Tomar en cuenta que los niños menores de 5 años no pueden
+# entrar al teatro y que existe un precio único en los asientos. Los descuentos
+# se hacen tomando en cuenta el siguiente cuadro:
+# Edad % Descuento
+# 5 – 14 35%
+# 15-19 25%
+# 20 – 45 10%
+# 46 – 65 25%
+# 66 en Adelante 35%
+# =============================================================================
+acu1 = 0
+acu2 = 0
+acu3 = 0
+acu4 = 0
+acu5 = 0
+total1 = 0
+total2 = 0
+total3 = 0
+total4 = 0
+total5 = 0
+asiento = 0
+i = 1
+while i == 1:
+    
+    edad = int(input('Ingrese edad del usuario: '))
+    if (edad > 5 or edad <= 14):
+        asiento = 5000
+        descuento1 = asiento * 0.35
+        total1 = asiento - descuento1
+        acu1 = acu1 + total1
+    if (edad >= 15 or edad <= 19):
+        asiento = 5000
+        descuento2 = asiento * 0.25
+        total2 = asiento - descuento2
+        acu2 = acu2 + total2
+    if (edad >= 20 or edad <= 45):
+        asiento = 5000
+        descuento3 = asiento * 0.10
+        total3 = asiento - descuento3
+        acu3 = acu3 + total3
+    if (edad >= 46 or edad <= 65):
+        asiento = 5000
+        descuento4 = asiento * 0.25
+        total4 = asiento - descuento4
+        acu4 = acu4 + total4
+    if (edad > 65):
+        asiento = 5000
+        descuento5 = asiento * 0.25
+        total5 = asiento - descuento5
+        acu5 = acu5 + total5
+    i = int(input('¿Desea continuar? (1).SI (2).NO : '))
+    
+
+print('total de descuento para el rango de edades entre 5 - 14 años es: ',total1)
+print('total de descuento para el rango de edades entre 15 - 19 años es: ',total2)
+print('total de descuento para el rango de edades entre 20 - 45 años es: ',total3)
+print('total de descuento para el rango de edades entre 46 - 65 años es: ',total4)
+print('total de descuento para el rango de edade de 65 años en adelante: ',total5)
+
