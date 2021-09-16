@@ -469,4 +469,46 @@ def cone():
 # el ganador o indicar si hubo empate y la cantidad de votos obtenidos.
 # =============================================================================
 def votos():
+    votos1 = 0
+    votos2 = 0
+    votos3 = 0
+    cantidato1 = ""
+    candidato2 = ""
+    candidato3 = ""
+
+    candidato1 = input('Ingrese el nombre del candidato N°1: ')
+    votos1 = int(input('Ingresar cantidad de votos del candidato N°1: '))
     
+    candidato2 = input('Ingrese el nombre del candidato N°2: ')
+    votos2 = int(input('Ingresar cantidad de votos del candidato N°2: '))
+    
+    
+    candidato3 = input('Ingrese el nombre del candidato N°3: ')
+    votos3 = int(input('Ingresar cantidad de votos del candidato N°3: '))
+        
+    
+    if (votos1 > votos2 and votos1 > votos3):
+        print(f'El ganador es : {candidato1}')
+        
+    if (votos2 > votos1 and votos2 > votos3):
+        print(f'El ganador es : {candidato2}')
+        
+    if (votos3 > votos1 and votos3 > votos2):
+        print(f'El ganador es : {candidato3}')
+        
+    if (votos1 == votos2):
+        print(f'Hay un empate!! entre: {candidato1} y candidato {candidato2}')
+        
+    if (votos1 == votos3):
+        print(f'Hay un empate!! entre: {candidato1} y candidato {candidato3}')
+        
+        
+    if (votos2 == votos3):
+        print(f'Hay un empate!! entre: {candidato2} y candidato {candidato3}')
+        
+        
+    if (votos3 == votos1):
+        print(f'Hay un empate!! entre: {candidato3} y candidato {candidato1}')
+        
+    if (votos3 == votos2):
+        print(f'Hay un empate!! entre: {candidato3} y candidato {candidato2}')
