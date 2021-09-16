@@ -366,26 +366,31 @@ while i == 1:
         descuento1 = asiento * 0.35
         total1 = asiento - descuento1
         acu1 = acu1 + total1
-    if (edad >= 15 or edad <= 19):
+        print('entro aqui')
+    elif (edad >= 15 or edad <= 19):
         asiento = 5000
         descuento2 = asiento * 0.25
         total2 = asiento - descuento2
         acu2 = acu2 + total2
-    if (edad >= 20 or edad <= 45):
+        print('entro aqui')
+    elif (edad >= 20 or edad <= 45):
         asiento = 5000
         descuento3 = asiento * 0.10
         total3 = asiento - descuento3
         acu3 = acu3 + total3
-    if (edad >= 46 or edad <= 65):
+        print('entro aqui')
+    elif (edad >= 46 or edad <= 65):
         asiento = 5000
         descuento4 = asiento * 0.25
         total4 = asiento - descuento4
         acu4 = acu4 + total4
-    if (edad > 65):
+        print('entro aqui')
+    elif (edad > 65):
         asiento = 5000
         descuento5 = asiento * 0.25
         total5 = asiento - descuento5
         acu5 = acu5 + total5
+        print('entro aqui')
     i = int(input('¿Desea continuar? (1).SI (2).NO : '))
     
 
@@ -395,3 +400,73 @@ print('total de descuento para el rango de edades entre 20 - 45 años es: ',tota
 print('total de descuento para el rango de edades entre 46 - 65 años es: ',total4)
 print('total de descuento para el rango de edade de 65 años en adelante: ',total5)
 
+# =============================================================================
+# Kia Autos premia anualmente a sus mejores vendedores de acuerdo a la
+# siguiente tabla:
+# Valor vendido Comisión
+# Menor o igual que 20
+# Millones
+# 10%
+# Mayor de 20 Millones y
+# menor de 40 Millones
+# 15%
+# Mayor o igual de 40 20%
+# Millones y menor de 80
+# Millones
+# Mayor o igual de 80
+# millones y menor de
+# 160 Millones
+# 25%
+# De 160 Millones en
+# adelante
+# 30%
+# Realice un método que diga cuanto vendió y la comisión de los 100
+# vendedores que tiene la empresa.
+# =============================================================================
+
+def cone():
+    acu1 = 0
+    acu2 = 0
+    acu3 = 0
+    acu4 = 0
+    acu5 = 0
+    venta1 = 0
+    venta2 = 0
+    venta3 = 0
+    venta4 = 0
+    venta5 = 0
+    for i in range(100):        
+        valor = int(input(f'Ingrese valor anual vendido por el vendedor N°{i + 1}: '))
+        if (valor <= 20000000):
+            comision = valor * 0.10
+            venta1 = venta1 + valor
+            acu1 = acu1 + comision                 
+        elif (valor > 20000000 and valor < 40000000):
+            comision = valor * 0.15
+            acu2 = acu2 + comision
+            venta2 = venta2 + valor                
+        elif (valor >= 40000000 and valor < 80000000):
+            comision = valor * 0.20
+            acu3 = acu3 + comision
+            venta3 = venta3 + valor                 
+        elif (valor >= 80000000 and valor < 1600000000):
+            comision = valor * 0.25
+            acu4 = acu4 + comision
+            venta4 = venta4 + valor
+        elif (valor > 1600000000):
+            comision = valor * 0.30
+            acu5 = acu5 + comision
+            venta5 = venta5 + valor
+                     
+    total = venta1 + venta2 + venta3 + venta4 + venta5
+    comisionTotal = acu1 + acu2 + acu3 + acu4 + acu5
+    print('El total vendido es: ',total)
+    print('Total de comision es: ',comisionTotal)       
+
+# =============================================================================
+# 10. La empresa Encuestas S.A desea crear una función que les permita
+# conocer de los 50.000 votos obtenidos por 3 candidatos, cual de estos fue
+# el ganador o indicar si hubo empate y la cantidad de votos obtenidos.
+# =============================================================================
+def votos():
+    
